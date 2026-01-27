@@ -13,10 +13,9 @@ body {
   line-height: 1.6;
 }
 
-/* Header and Navigation */
+/* Header and Logo */
 header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   background: #fff;
   padding: 15px 30px;
@@ -30,37 +29,69 @@ header {
   height: 60px;
 }
 
-/* Action Bar Navigation */
-nav.action-bar {
-  margin-left: auto; /* pushes nav to the right */
+/* --- ACTION BAR --- */
+.action-bar {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 12px;
 }
 
-nav.action-bar ul {
-  list-style: none;
+/* Hamburger Icon */
+.menu-icon {
+  cursor: pointer;
+  background: #007a5c;
+  padding: 12px;
   display: flex;
-  gap: 25px;
+  flex-direction: column;
+  gap: 6px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
 }
 
-nav.action-bar a {
+.menu-icon:hover { background: #005f47; }
+
+.menu-icon span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+}
+
+/* --- NAV MENU --- */
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -320px;
+  width: 300px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: -10px 0 25px rgba(0,0,0,0.15);
+  transition: right 0.4s ease;
+  padding: 40px 20px;
+  z-index: 10000;
+}
+
+.nav-menu.active { right: 0; }
+
+.nav-menu ul { list-style: none; padding: 0; margin: 0; }
+
+.nav-menu li { margin: 20px 0; }
+
+.nav-menu a {
   text-decoration: none;
-  color: #fff; /* white text */
-  background: linear-gradient(135deg, #00b894, #007a5c); /* gradient green */
+  font-size: 1.3rem;
   font-weight: 600;
-  padding: 8px 18px; /* button-like spacing */
-  border-radius: 6px; /* rounded corners */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* subtle shadow */
-  transition: background 0.3s ease, transform 0.2s ease;
+  color: #333;
+  transition: color 0.3s ease;
 }
 
-nav.action-bar a:hover {
-  background: linear-gradient(135deg, #007a5c, #005f47); /* darker gradient on hover */
-  transform: translateY(-2px); /* slight lift effect */
-}
-
-nav.action-bar a.active {
-  background: linear-gradient(135deg, #333, #555); /* distinct gradient for active page */
-  color: #fff;
-}
+.nav-menu a:hover { color: #007bff; }
 
 /* Slideshow */
 .slideshow {
