@@ -1,4 +1,3 @@
-<script>
 // Slideshow functionality
 let slideIndex = 0;
 showSlides();
@@ -19,4 +18,3 @@ function toggleMenu() {
   const navMenu = document.getElementById("navMenu");
   navMenu.classList.toggle("active");
 }
-</script>
