@@ -1,3 +1,4 @@
+<script>
 // Slideshow functionality
 let slideIndex = 0;
 showSlides();
@@ -13,8 +14,9 @@ function showSlides() {
   setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
 
-// Optional: Mobile menu toggle (if you want a hamburger menu later)
+// Modern Action Bar Toggle
 function toggleMenu() {
-  const nav = document.querySelector("nav ul");
-  nav.classList.toggle("show");
+  const navMenu = document.getElementById("navMenu");
+  navMenu.classList.toggle("active");
 }
+</script>
