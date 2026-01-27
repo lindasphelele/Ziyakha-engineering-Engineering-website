@@ -8,7 +8,7 @@
 /* Body and Typography */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: #ffffff;
+  background: linear-gradient(to right, #f4f7f6, #ffffff); /* subtle gradient background */
   color: #333;
   line-height: 1.6;
 }
@@ -35,7 +35,7 @@ nav.action-bar {
   margin-left: auto; /* pushes nav to the right */
 }
 
-nav.action-bar a {
+nav.action-bar ul {
   list-style: none;
   display: flex;
   gap: 25px;
@@ -43,18 +43,23 @@ nav.action-bar a {
 
 nav.action-bar a {
   text-decoration: none;
-  color: #333;
+  color: #fff; /* white text */
+  background: linear-gradient(135deg, #00b894, #007a5c); /* gradient green */
   font-weight: 600;
-  padding: 5px 0;
-  transition: color 0.2s ease;
+  padding: 8px 18px; /* button-like spacing */
+  border-radius: 6px; /* rounded corners */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* subtle shadow */
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 nav.action-bar a:hover {
-  color: #007a5c; /* subtle hover effect */
+  background: linear-gradient(135deg, #007a5c, #005f47); /* darker gradient on hover */
+  transform: translateY(-2px); /* slight lift effect */
 }
 
 nav.action-bar a.active {
-  border-bottom: 2px solid #333;
+  background: linear-gradient(135deg, #333, #555); /* distinct gradient for active page */
+  color: #fff;
 }
 
 /* Slideshow */
@@ -214,7 +219,8 @@ form button:hover {
 footer {
   text-align: center;
   padding: 20px;
-  background: #f9f9f9;
+  background: linear-gradient(135deg, #00b894, #007a5c); /* gradient footer */
+  color: #fff;
   border-top: 1px solid #eee;
   margin-top: 40px;
 }
