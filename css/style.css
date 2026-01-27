@@ -35,7 +35,7 @@ nav.action-bar {
   margin-left: auto; /* pushes nav to the right */
 }
 
-nav.action-bar ul {
+nav.action-bar a {
   list-style: none;
   display: flex;
   gap: 25px;
