@@ -7,59 +7,74 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-  <img src="images/logo.png.jpeg" alt="Ziyakha Engineering Logo" class="logo">
-  <nav class="action-bar">
+  <!-- Floating Action Bar -->
+  <div class="action-bar">
+    <div class="menu-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Slide-In Navigation Menu -->
+  <nav class="nav-menu" id="navMenu">
+    <div class="close-btn" onclick="toggleMenu()">&times;</div>
     <ul>
-      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="partnerships.html">Partnerships</a></li>
-      <li><a href="affiliations.html">Affiliations</a></li>
+      <li><a href="affiliations.html" class="active">Affiliations</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-</header>
 
-<section class="content">
-  <h2>Affiliations</h2>
-  <p>We are affiliated with respected organizations and certification bodies to ensure compliance and excellence in safety and construction standards.</p>
+  <!-- Logo Header -->
+  <header>
+    <img src="images/logo.png.jpeg" alt="Ziyakha Engineering Logo" class="logo">
+  </header>
 
-  <!-- Slideshow container -->
-  <div class="slideshow-container">
+  <!-- Content -->
+  <section class="content">
+    <h2>Affiliations</h2>
+    <p>We are affiliated with respected organizations and certification bodies to ensure compliance and excellence in safety and construction standards.</p>
 
-    <div class="affiliationSlides fade">
-      <img src="images/affiliation1.png.jpeg" alt="NYDA">
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+      <div class="affiliationSlides fade">
+        <img src="images/affiliation1.png.jpeg" alt="NYDA">
+      </div>
+
+      <div class="affiliationSlides fade">
+        <img src="images/affiliation2.png.jpeg" alt="Standard Bank">
+      </div>
+
+      <div class="affiliationSlides fade">
+        <img src="images/affiliation3.png.jpeg" alt="WCW">
+      </div>
+
+      <div class="affiliationSlides fade">
+        <img src="images/affiliation4.png.jpeg" alt="Graca Machel Trust">
+      </div>
+
+      <div class="affiliationSlides fade">
+        <img src="images/softstart_0.png.png" alt="SoftStart BTI">
+      </div>
+
+      <div class="affiliationSlides fade">
+        <img src="images/ekasi-footer-1.png" alt="Ekasi Labs">
+      </div>
+
     </div>
+  </section>
 
-    <div class="affiliationSlides fade">
-      <img src="images/affiliation2.png.jpeg" alt="Standard Bank">
-    </div>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Ziyakha Engineering PTY LTD</p>
+  </footer>
 
-    <div class="affiliationSlides fade">
-      <img src="images/affiliation3.png.jpeg" alt="WCW">
-    </div>
-
-    <div class="affiliationSlides fade">
-      <img src="images/affiliation4.png.jpeg" alt="Graca Machel Trust">
-    </div>
-
-    <div class="affiliationSlides fade">
-      <img src="images/softstart_0.png.png" alt="SoftStart BTI">
-    </div>
-
-    <div class="affiliationSlides fade">
-      <img src="images/ekasi-footer-1.png" alt="Ekasi Labs">
-    </div>
-
-  </div>
-</section>
-
-<footer>
-  <p>&copy; 2026 Ziyakha Engineering PTY LTD</p>
-</footer>
-
-<!-- JavaScript -->
-<script src="js/script.js"></script>
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
 </body>
 </html>
