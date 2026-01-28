@@ -32,8 +32,8 @@ header {
 /* --- ACTION BAR --- */
 .action-bar {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 15px;
+  right: 15px;
   z-index: 9999;
   background: #ffffff;
   border-radius: 12px;
@@ -45,7 +45,7 @@ header {
 .menu-icon {
   cursor: pointer;
   background: #007a5c;
-  padding: 12px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -57,8 +57,8 @@ header {
 
 .menu-icon span {
   display: block;
-  width: 28px;
-  height: 3px;
+  width: 24px;
+  height: 2px;
   background: #fff;
   border-radius: 2px;
 }
