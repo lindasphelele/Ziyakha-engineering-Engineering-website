@@ -7,84 +7,93 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-  <img src="images/logo.png.jpeg" alt="Ziyakha Engineering Logo" class="logo">
-  <nav class="action-bar">
+  <!-- Floating Action Bar -->
+  <div class="action-bar">
+    <div class="menu-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Slide-In Navigation Menu -->
+  <nav class="nav-menu" id="navMenu">
+    <div class="close-btn" onclick="toggleMenu()">&times;</div>
     <ul>
-      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
-      <li><a href="services.html">Services</a></li>
+      <li><a href="services.html" class="active">Services</a></li>
       <li><a href="partnerships.html">Partnerships</a></li>
       <li><a href="affiliations.html">Affiliations</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-</header>
 
-<section class="content">
-  <h2>Services</h2>
-  <p>We provide accredited safety training and consultancy services to ensure compliance, productivity, and operational excellence in high-risk environments.</p>
+  <!-- Logo Header -->
+  <header>
+    <img src="images/logo.png.jpeg" alt="Ziyakha Engineering Logo" class="logo">
+  </header>
 
-  <h3>OHSA</h3>
-  <p>We provide Accredited Safety training modules that enable organizations to function effectively. Our skilled stuff is committed to keeping up with the most recent safety requirements and best practices to ensure our clients meet and surpass industry safety standards.</p>
-  <ul>
-    
-    <li>Mining</li>
-    <li>Construction</li>
-    <li>Heavy duty</li>
-    <li>manufacturing</li>
-  </ul>
+  <!-- Content -->
+  <section class="content">
+    <h2>Services</h2>
+    <p>We provide accredited safety training and consultancy services to ensure compliance, productivity, and operational excellence in high-risk environments.</p>
 
-  <h3>CONTSRUCTION MATERIALS CONSULTANCY</h3>
-  <p>We are a reasonable stakeholder in the construction industry with a team of specialists in fields of business development, Project, Quality and environmental management. Servicing both start ups and existing companies in construction materials.</p>
-  <ul>
-    
-    <li>Feasibility Study</li>
-    <li>Concrete Ready Mix Plant</li>
-    <li>Aggreatre Crushing Plant</li>
-    <li>Cement Blending plNT</li>
-    <li>Mining Pre Mix bag Plant</li>
-    <li>Brick, Blocks &amp; Pavers Plant</li>
-    
-  </ul>
+    <h3>OHSA</h3>
+    <p>We provide Accredited Safety training modules that enable organizations to function effectively. Our skilled staff is committed to keeping up with the most recent safety requirements and best practices to ensure our clients meet and surpass industry safety standards.</p>
+    <ul>
+      <li>Mining</li>
+      <li>Construction</li>
+      <li>Heavy duty</li>
+      <li>Manufacturing</li>
+    </ul>
 
-  <h3>Construction Materials Consultancy</h3>
-  <p>We are a trusted stakeholder in the construction industry, offering expertise in business development, project management, quality assurance, and environmental management.</p>
+    <h3>Construction Materials Consultancy</h3>
+    <p>We are a reasonable stakeholder in the construction industry with a team of specialists in fields of business development, project, quality and environmental management. Servicing both start ups and existing companies in construction materials.</p>
+    <ul>
+      <li>Feasibility Study</li>
+      <li>Concrete Ready Mix Plant</li>
+      <li>Aggregate Crushing Plant</li>
+      <li>Cement Blending Plant</li>
+      <li>Mining Pre Mix Bag Plant</li>
+      <li>Brick, Blocks &amp; Pavers Plant</li>
+    </ul>
 
-  <h4>Areas of Expertise</h4>
-  <ul>
-    <li>Feasibility Studies</li>
-    <li>Concrete Ready Mix Plant</li>
-    <li>Aggregate Crushing Plant</li>
-    <li>Cement Blending Plant</li>
-    <li>Mining Pre-Mix Bag Plant</li>
-    <li>Brick, Blocks & Pavers Plant</li>
-    <li>Site Selection & Environmental Impact</li>
-    <li>Equipment Selection & Plant Optimization</li>
-    <li>Raw Materials Selection (Cement, Extenders, PFA, Stone, Sand, Admixtures, Fibres)</li>
-    <li>Mix Designs & Quality Assurance Systems</li>
-  </ul>
+    <h4>Areas of Expertise</h4>
+    <ul>
+      <li>Feasibility Studies</li>
+      <li>Concrete Ready Mix Plant</li>
+      <li>Aggregate Crushing Plant</li>
+      <li>Cement Blending Plant</li>
+      <li>Mining Pre-Mix Bag Plant</li>
+      <li>Brick, Blocks & Pavers Plant</li>
+      <li>Site Selection & Environmental Impact</li>
+      <li>Equipment Selection & Plant Optimization</li>
+      <li>Raw Materials Selection (Cement, Extenders, PFA, Stone, Sand, Admixtures, Fibres)</li>
+      <li>Mix Designs & Quality Assurance Systems</li>
+    </ul>
 
-  <h4>Financial & Costing Models</h4>
-  <ul>
-    <li>Capital & Operational Expenditure (Capex & Opex)</li>
-    <li>Production Forecast & Cash Flow</li>
-    <li>Capital Repayment & Return on Investment (ROI)</li>
-  </ul>
+    <h4>Financial & Costing Models</h4>
+    <ul>
+      <li>Capital & Operational Expenditure (Capex & Opex)</li>
+      <li>Production Forecast & Cash Flow</li>
+      <li>Capital Repayment & Return on Investment (ROI)</li>
+    </ul>
 
-  <h4>Quality Management Systems</h4>
-  <ul>
-    <li>ISO 9001:2015</li>
-    <li>ISO 14001:2015</li>
-    <li>ISO 45001</li>
-  </ul>
-</section>
+    <h4>Quality Management Systems</h4>
+    <ul>
+      <li>ISO 9001:2015</li>
+      <li>ISO 14001:2015</li>
+      <li>ISO 45001</li>
+    </ul>
+  </section>
 
-<footer>
-  <p>&copy; 2026 Ziyakha Engineering PTY LTD</p>
-</footer>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Ziyakha Engineering PTY LTD</p>
+  </footer>
   
-   <!-- JavaScript -->
-  <script src="js/script.js"></script>
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
 </body>
 </html>
