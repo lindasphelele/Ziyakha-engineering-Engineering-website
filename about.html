@@ -7,34 +7,36 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-  <img src="images/logo.png.jpeg" alt="Ziyakha Engineering Logo" class="logo">
-  <nav class="action-bar">
+  <!-- Floating Action Bar -->
+  <div class="action-bar">
+    <div class="menu-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Slide-In Navigation Menu -->
+  <nav class="nav-menu" id="navMenu">
+    <div class="close-btn" onclick="toggleMenu()">&times;</div>
     <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">About Us</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="partnerships.html">Partnerships</a></li>
       <li><a href="affiliations.html">Affiliations</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-</header>
 
-<section class="content">
-  <h2>About Us</h2>
-  <p>"Welcome to ZIYAKHA ENGINEERING, your premier partner in construction engineering consultancy and safety training based in South Africa. We are committed to excellence in high-risk environments, ensuring that your projects are both safe and successful."</p>
+  <!-- Logo Header -->
+  <header>
+    <img src="images/logo.png.jpeg" alt="Ziyakha Engineering Logo" class="logo">
+  </header>
 
-  <h3>Mission Statement</h3>
-  <p>"Our mission is to empower businesses with the knowledge and solutions they need to operate seamlessly and efficiently. With a team of seasoned experts, we combine extensive industry insights with innovative strategies, enabling your operations to not only meet compliance standards but also excel in safety and productivity."</p>
-  
-</section>
+  <!-- Content -->
+  <section class="content">
+    <h2>About Us</h2>
+    <p>"Welcome to ZIYAKHA ENGINEERING, your premier partner in construction engineering consultancy and safety training based in South Africa. We are committed to excellence in high-risk environments, ensuring that your projects are both safe and successful."</p>
 
-<footer>
-  <p>&copy; 2026 Ziyakha Engineering PTY LTD</p>
-</footer>
-
-   <!-- JavaScript -->
-  <script src="js/script.js"></script>
-</body>
-</html>
+    <h3>Mission Statement
