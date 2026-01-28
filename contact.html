@@ -7,55 +7,66 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-  <img src="images/logo.png.jpeg" alt="Ziyakha Engineering Logo" class="logo">
-  <nav class="action-bar">
+  <!-- Floating Action Bar -->
+  <div class="action-bar">
+    <div class="menu-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Slide-In Navigation Menu -->
+  <nav class="nav-menu" id="navMenu">
+    <div class="close-btn" onclick="toggleMenu()">&times;</div>
     <ul>
-      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="partnerships.html">Partnerships</a></li>
       <li><a href="affiliations.html">Affiliations</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
   </nav>
-</header>
 
-<section class="content">
-  <h2>Contact Us</h2>
-  <p><strong>CEO:</strong> Lehlohonolo Magoete</p>
-  <p><strong>Phone:</strong> +27 65 936 4152</p>
-  <p><strong>Email:</strong> ziyakhaengineering@gmail.com</p>
-  <p><strong>Facebook:</strong> Ziyakha Engineering</p>
-  <p><strong>Website:</strong> www.ziyakhaengineering</p>
+  <!-- Logo Header -->
+  <header>
+    <img src="images/logo.png.jpeg" alt="Ziyakha Engineering Logo" class="logo">
+  </header>
 
-  <h3>Send us a message</h3>
-  <!-- Replace "yourformid" with your actual Formspree ID -->
-  <form id="contactForm" action="https://formspree.io/f/mlgbyqlz" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+  <!-- Content -->
+  <section class="content">
+    <h2>Contact Us</h2>
+    <p><strong>CEO:</strong> Lehlohonolo Magoete</p>
+    <p><strong>Phone:</strong> +27 65 936 4152</p>
+    <p><strong>Email:</strong> ziyakhaengineering@gmail.com</p>
+    <p><strong>Facebook:</strong> Ziyakha Engineering</p>
+    <p><strong>Website:</strong> www.ziyakhaengineering</p>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="_replyto" required>
+    <h3>Send us a message</h3>
+    <form id="contactForm" action="https://formspree.io/f/mlgbyqlz" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
 
-    <label for="message">Message:</label>
-    <textarea id="message" name="message" rows="6" required></textarea>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="_replyto" required>
 
-    <button type="submit">Send Message</button>
-  </form>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
 
-  <!-- Feedback message -->
-  <div id="formResponse"></div>
-</section>
+      <button type="submit">Send Message</button>
+    </form>
 
-<footer>
-  <p>&copy; 2026 Ziyakha Engineering PTY LTD</p>
-</footer>
+    <!-- Feedback message -->
+    <div id="formResponse"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Ziyakha Engineering PTY LTD</p>
+  </footer>
   
-   <!-- JavaScript -->
-  <script src="js/script.js"></script>
-
-<!-- Link to external JS -->
-<script src="js/script.js"></script>
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
 </body>
 </html>
