@@ -93,7 +93,7 @@ header {
 
 .nav-menu a:hover { color: #007bff; }
 
-/* Slideshow */
+/* Slideshow (Homepage or general) */
 .slideshow {
   position: relative;
   max-width: 100%;
@@ -115,6 +115,26 @@ header {
 @keyframes fade {
   from { opacity: 0.4; }
   to { opacity: 1; }
+}
+
+/* Affiliations Slideshow */
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  margin: 40px auto;
+}
+
+.affiliationSlides {
+  display: none;
+  animation: fade 1.5s ease-in-out;
+}
+
+.affiliationSlides img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 /* Welcome Section */
@@ -191,7 +211,7 @@ header {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Affiliations (Logo + Text) */
+/* Affiliations (Static Logos if needed) */
 .partners {
   text-align: center;
   margin: 30px 0;
