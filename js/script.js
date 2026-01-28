@@ -1,4 +1,6 @@
-// Slideshow functionality
+// -----------------------------
+// General Slideshow functionality (for homepage or other sections using .slides)
+// -----------------------------
 let slideIndex = 0;
 showSlides();
 
@@ -9,14 +11,39 @@ function showSlides() {
   }
   slideIndex++;
   if (slideIndex > slides.length) { slideIndex = 1 }
-  slides[slideIndex - 1].style.display = "block";
+  if (slides.length > 0) {
+    slides[slideIndex - 1].style.display = "block";
+  }
   setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
 
+// -----------------------------
+// Affiliations Slideshow functionality (for affiliations.html using .affiliationSlides)
+// -----------------------------
+let affiliationIndex = 0;
+showAffiliations();
+
+function showAffiliations() {
+  let slides = document.getElementsByClassName("affiliationSlides");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  affiliationIndex++;
+  if (affiliationIndex > slides.length) { affiliationIndex = 1 }
+  if (slides.length > 0) {
+    slides[affiliationIndex - 1].style.display = "block";
+  }
+  setTimeout(showAffiliations, 3000); // Change every 3 seconds
+}
+
+// -----------------------------
 // Modern Action Bar Toggle
+// -----------------------------
 function toggleMenu() {
   const navMenu = document.getElementById("navMenu");
-  navMenu.classList.toggle("active");
+  if (navMenu) {
+    navMenu.classList.toggle("active");
+  }
 }
 
 // -----------------------------
