@@ -37,6 +37,25 @@ function showAffiliations() {
 }
 
 // -----------------------------
+// Partnerships Slideshow functionality (for partnerships.html using .partnershipSlides)
+// -----------------------------
+let partnershipIndex = 0;
+showPartnerships();
+
+function showPartnerships() {
+  let slides = document.getElementsByClassName("partnershipSlides");
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  partnershipIndex++;
+  if (partnershipIndex > slides.length) { partnershipIndex = 1 }
+  if (slides.length > 0) {
+    slides[partnershipIndex - 1].style.display = "block";
+  }
+  setTimeout(showPartnerships, 3500); // Change every 3.5 seconds
+}
+
+// -----------------------------
 // Modern Action Bar Toggle
 // -----------------------------
 function toggleMenu() {
