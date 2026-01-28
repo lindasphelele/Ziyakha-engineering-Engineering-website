@@ -137,6 +137,20 @@ header {
   border-radius: 8px;
 }
 
+/* Partnerships Slideshow */
+.partnershipSlides {
+  display: none;
+  animation: fade 1.5s ease-in-out;
+}
+
+.partnershipSlides img {
+  width: 100%;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
 /* Welcome Section */
 .welcome {
   text-align: center;
