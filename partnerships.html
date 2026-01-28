@@ -7,47 +7,60 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
-  <img src="images/logo.png.jpeg" alt="Ziyakha Engineering Logo" class="logo">
-  <nav class="action-bar">
+  <!-- Floating Action Bar -->
+  <div class="action-bar">
+    <div class="menu-icon" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- Slide-In Navigation Menu -->
+  <nav class="nav-menu" id="navMenu">
+    <div class="close-btn" onclick="toggleMenu()">&times;</div>
     <ul>
-      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="services.html">Services</a></li>
-      <li><a href="partnerships.html">Partnerships</a></li>
+      <li><a href="partnerships.html" class="active">Partnerships</a></li>
       <li><a href="affiliations.html">Affiliations</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
-</header>
 
-<section class="content">
-  <h2>Partnerships</h2>
-  <p>We proudly collaborate with leading organizations and participate in programs that empower women and youth in business.</p>
+  <!-- Logo Header -->
+  <header>
+    <img src="images/logo.png.jpeg" alt="Ziyakha Engineering Logo" class="logo">
+  </header>
 
-  <!-- Slideshow container -->
-  <div class="slideshow-container">
+  <section class="content">
+    <h2>Partnerships</h2>
+    <p>We proudly collaborate with leading organizations and participate in programs that empower women and youth in business.</p>
 
-    <div class="partnershipSlides fade">
-      <img src="images/Bakubung-1280x720.png" alt="Bakubung Platinum Mine">
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+      <div class="partnershipSlides fade">
+        <img src="images/Bakubung-1280x720.png" alt="Bakubung Platinum Mine">
+      </div>
+
+      <div class="partnershipSlides fade">
+        <img src="images/WhatsApp Image 2026-01-28 at 11.50.12 (1).jpeg" alt="TIMSRAND">
+      </div>
+
+      <div class="partnershipSlides fade">
+        <img src="images/WhatsApp Image 2026-01-28 at 11.50.12.jpeg" alt="BBCBE">
+      </div>
+
     </div>
+  </section>
 
-    <div class="partnershipSlides fade">
-      <img src="images/WhatsApp Image 2026-01-28 at 11.50.12 (1).jpeg" alt="TIMSRAND">
-    </div>
-
-    <div class="partnershipSlides fade">
-      <img src="images/WhatsApp Image 2026-01-28 at 11.50.12.jpeg" alt="BBCBE">
-    </div>
-
-  </div>
-</section>
-
-<footer>
-  <p>&copy; 2026 Ziyakha Engineering PTY LTD</p>
-</footer>
+  <footer>
+    <p>&copy; 2026 Ziyakha Engineering PTY LTD</p>
+  </footer>
   
-<!-- JavaScript -->
-<script src="js/script.js"></script>
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
 </body>
 </html>
