@@ -290,35 +290,40 @@ footer {
   margin: 20px 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
+  gap: 14px;
+  justify-content: flex-start;
 }
 
-/* Advanced button styling */
+/* Beautiful, modern button styling */
 .service-btn {
   position: relative;
   background: linear-gradient(135deg, #007a5c, #00b894);
   color: #fff;
   border: none;
-  padding: 12px 20px;
+  padding: 14px 24px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  transition: all 0.35s ease;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
   overflow: hidden;
+  letter-spacing: 0.5px;
 }
 
+/* Hover effect: glow + gradient shift */
 .service-btn:hover {
-  background: linear-gradient(135deg, #00b894, #007a5c);
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  background: linear-gradient(135deg, #00c9a7, #007a5c);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 201, 167, 0.4);
 }
 
+/* Active/selected state: bold highlight */
 .service-btn.active {
   background: linear-gradient(135deg, #ff6f61, #ff3d00);
   color: #fff;
-  box-shadow: 0 6px 18px rgba(255, 61, 0, 0.4);
+  box-shadow: 0 8px 22px rgba(255, 61, 0, 0.5);
+  transform: translateY(-2px);
 }
 
 /* Ripple effect styling */
@@ -327,7 +332,7 @@ footer {
   border-radius: 50%;
   transform: scale(0);
   animation: ripple 0.6s linear;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.6);
   pointer-events: none;
 }
 
@@ -338,13 +343,13 @@ footer {
   }
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .button-group {
-    flex-direction: column;
-  }
-  .service-btn {
-    width: 100%;
-    text-align: center;
-  }
-}
+/* Animated border glow */
+.service-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 2px;
+  background: linear-gradient(135deg, #00b894, #007a5c, #00c9a7);
+  -webkit-mask: 
+    linear-gradient(#fff 0 
