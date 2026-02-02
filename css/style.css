@@ -8,7 +8,7 @@
 /* Body and Typography */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(to right, #f4f7f6, #ffffff); /* subtle gradient background */
+  background: linear-gradient(to right, #f4f7f6, #ffffff);
   color: #333;
   line-height: 1.6;
 }
@@ -93,7 +93,7 @@ header {
 
 .nav-menu a:hover { color: #007bff; }
 
-/* Slideshow (Homepage or general) */
+/* Slideshow */
 .slideshow {
   position: relative;
   max-width: 100%;
@@ -184,7 +184,7 @@ header {
   font-size: 1.4rem;
   margin-top: 30px;
   margin-bottom: 10px;
-  color: #007a5c; /* make subheadings stand out */
+  color: #007a5c;
   font-weight: 700;
 }
 
@@ -220,7 +220,7 @@ header {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Affiliations (Static Logos if needed) */
+/* Affiliations */
 .partners {
   text-align: center;
   margin: 30px 0;
@@ -268,4 +268,83 @@ form button {
   border: none;
   border-radius: 5px;
   font-weight: bold;
-  cursor
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #555;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #00b894, #007a5c);
+  color: #fff;
+  border-top: 1px solid #eee;
+  margin-top: 40px;
+}
+
+/* --- SERVICES PAGE BUTTONS --- */
+.button-group {
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Advanced button styling */
+.service-btn {
+  position: relative;
+  background: linear-gradient(135deg, #007a5c, #00b894);
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.service-btn:hover {
+  background: linear-gradient(135deg, #00b894, #007a5c);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.service-btn.active {
+  background: linear-gradient(135deg, #ff6f61, #ff3d00);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(255, 61, 0, 0.4);
+}
+
+/* Ripple effect styling */
+.service-btn .ripple {
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  background-color: rgba(255, 255, 255, 0.7);
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .button-group {
+    flex-direction: column;
+  }
+  .service-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
