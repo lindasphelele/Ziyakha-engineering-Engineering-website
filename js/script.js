@@ -99,18 +99,20 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-});
 
-// -----------------------------
-// Services Page Toggle Sections
-// -----------------------------
-function toggleSection(id) {
-  const section = document.getElementById(id);
-  if (section) {
-    if (section.style.display === "none" || section.style.display === "") {
-      section.style.display = "block";
-    } else {
-      section.style.display = "none";
-    }
-  }
-}
+  // -----------------------------
+  // Services Page Button Actions
+  // -----------------------------
+  const serviceButtons = document.querySelectorAll(".service-btn");
+  serviceButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Example behavior: highlight the clicked button
+      serviceButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      // Optional: show alert or expand details
+      // alert(`You clicked: ${button.innerText}`);
+      // Or trigger a modal / load more info dynamically
+    });
+  });
+});
