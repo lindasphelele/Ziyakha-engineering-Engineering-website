@@ -1,68 +1,43 @@
 // -----------------------------
-// General Slideshow functionality (for homepage or other sections using .slides)
+// Utility: cycle through slides
 // -----------------------------
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-  let slides = document.getElementsByClassName("slides");
+function cycleSlides(className, interval, indexRef) {
+  const slides = document.getElementsByClassName(className);
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1 }
+  indexRef.value++;
+  if (indexRef.value > slides.length) indexRef.value = 1;
   if (slides.length > 0) {
-    slides[slideIndex - 1].style.display = "block";
+    slides[indexRef.value - 1].style.display = "block";
   }
-  setTimeout(showSlides, 4000); // Change image every 4 seconds
+  setTimeout(() => cycleSlides(className, interval, indexRef), interval);
 }
 
 // -----------------------------
-// Affiliations Slideshow functionality (for affiliations.html using .affiliationSlides)
+// General Slideshow (homepage)
 // -----------------------------
-let affiliationIndex = 0;
-showAffiliations();
-
-function showAffiliations() {
-  let slides = document.getElementsByClassName("affiliationSlides");
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  affiliationIndex++;
-  if (affiliationIndex > slides.length) { affiliationIndex = 1 }
-  if (slides.length > 0) {
-    slides[affiliationIndex - 1].style.display = "block";
-  }
-  setTimeout(showAffiliations, 3000); // Change every 3 seconds
-}
+let slideIndex = { value: 0 };
+cycleSlides("slides", 4000, slideIndex);
 
 // -----------------------------
-// Partnerships Slideshow functionality (for partnerships.html using .partnershipSlides)
+// Affiliations Slideshow
 // -----------------------------
-let partnershipIndex = 0;
-showPartnerships();
+let affiliationIndex = { value: 0 };
+cycleSlides("affiliationSlides", 3000, affiliationIndex);
 
-function showPartnerships() {
-  let slides = document.getElementsByClassName("partnershipSlides");
-  for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  partnershipIndex++;
-  if (partnershipIndex > slides.length) { partnershipIndex = 1 }
-  if (slides.length > 0) {
-    slides[partnershipIndex - 1].style.display = "block";
-  }
-  setTimeout(showPartnerships, 3500); // Change every 3.5 seconds
-}
+// -----------------------------
+// Partnerships Slideshow
+// -----------------------------
+let partnershipIndex = { value: 0 };
+cycleSlides("partnershipSlides", 3500, partnershipIndex);
 
 // -----------------------------
 // Modern Action Bar Toggle
 // -----------------------------
 function toggleMenu() {
   const navMenu = document.getElementById("navMenu");
-  if (navMenu) {
-    navMenu.classList.toggle("active");
-  }
+  if (navMenu) navMenu.classList.toggle("active");
 }
 
 // -----------------------------
@@ -73,16 +48,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const responseDiv = document.getElementById("formResponse");
 
   if (form) {
-    form.addEventListener("submit", async function(e) {
+    form.addEventListener("submit", async function (e) {
       e.preventDefault();
-
       const formData = new FormData(form);
 
       try {
         const response = await fetch(form.action, {
           method: form.method,
           body: formData,
-          headers: { 'Accept': 'application/json' }
+          headers: { Accept: "application/json" },
         });
 
         if (response.ok) {
@@ -104,15 +78,27 @@ document.addEventListener("DOMContentLoaded", () => {
   // Services Page Button Actions
   // -----------------------------
   const serviceButtons = document.querySelectorAll(".service-btn");
-  serviceButtons.forEach(button => {
+
+  serviceButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      // Example behavior: highlight the clicked button
-      serviceButtons.forEach(btn => btn.classList.remove("active"));
+      // Highlight clicked button
+      serviceButtons.forEach((btn) => btn.classList.remove("active"));
       button.classList.add("active");
 
-      // Optional: show alert or expand details
-      // alert(`You clicked: ${button.innerText}`);
-      // Or trigger a modal / load more info dynamically
+      // Optional: dynamic behavior
+      // Example: log or show modal
+      console.log(`Service selected: ${button.innerText}`);
+    });
+
+    // Ripple effect (JS fallback for CSS ::after)
+    button.addEventListener("mousedown", (e) => {
+      const circle = document.createElement("span");
+      circle.classList.add("ripple");
+      const rect = button.getBoundingClientRect();
+      circle.style.left = `${e.clientX - rect.left}px`;
+      circle.style.top = `${e.clientY - rect.top}px`;
+      button.appendChild(circle);
+      setTimeout(() => circle.remove(), 600);
     });
   });
 });
