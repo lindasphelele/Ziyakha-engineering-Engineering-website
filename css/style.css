@@ -184,13 +184,8 @@ header {
   font-size: 1.4rem;
   margin-top: 30px;
   margin-bottom: 10px;
-  color: #333;
-}
-
-.content ul {
-  list-style: disc;
-  margin: 15px 0 30px 40px;
-  color: #555;
+  color: #007a5c; /* make subheadings stand out */
+  font-weight: 700;
 }
 
 /* Partnerships (Card Layout) */
@@ -273,49 +268,4 @@ form button {
   border: none;
   border-radius: 5px;
   font-weight: bold;
-  cursor: pointer;
-}
-
-form button:hover {
-  background: #555;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: linear-gradient(135deg, #00b894, #007a5c); /* gradient footer */
-  color: #fff;
-  border-top: 1px solid #eee;
-  margin-top: 40px;
-}
-
-/* --- SERVICES PAGE OHSA BUTTON --- */
-.toggle-btn {
-  background-color: #007a5c;
-  color: #fff;
-  border: none;
-  padding: 12px 16px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  border-radius: 6px;
-  margin: 12px 0;
-  display: block;
-  width: 100%;
-  text-align: left;
-  transition: background 0.3s ease;
-}
-
-.toggle-btn:hover {
-  background-color: #005f47;
-}
-
-.toggle-content {
-  display: none;
-  margin: 10px 0 20px 0;
-  padding: 15px;
-  background: #f9f9f9;
-  border-left: 4px solid #007a5c;
-  border-radius: 6px;
-}
+  cursor
