@@ -117,40 +117,6 @@ header {
   to { opacity: 1; }
 }
 
-/* Affiliations Slideshow */
-.slideshow-container {
-  max-width: 600px;
-  position: relative;
-  margin: 40px auto;
-}
-
-.affiliationSlides {
-  display: none;
-  animation: fade 1.5s ease-in-out;
-}
-
-.affiliationSlides img {
-  width: 100%;
-  height: auto;
-  max-height: 200px;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
-/* Partnerships Slideshow */
-.partnershipSlides {
-  display: none;
-  animation: fade 1.5s ease-in-out;
-}
-
-.partnershipSlides img {
-  width: 100%;
-  height: auto;
-  max-height: 300px;
-  object-fit: contain;
-  border-radius: 8px;
-}
-
 /* Welcome Section */
 .welcome {
   text-align: center;
@@ -220,19 +186,32 @@ header {
   box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
-/* Affiliations */
-.partners {
-  text-align: center;
-  margin: 30px 0;
+/* Contact Page Layout */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.partners img {
-  height: 100px;
+.contact-form, .contact-info {
+  flex: 1;
+  min-width: 300px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 30px;
+}
+
+.contact-form h2, .contact-info h2 {
+  color: #000;   /* black subheadings */
+  margin-bottom: 20px;
+}
+
+.contact-info p {
   margin-bottom: 10px;
-}
-
-.partners p {
-  font-size: 14px;
   color: #555;
 }
 
@@ -241,8 +220,6 @@ form {
   display: flex;
   flex-direction: column;
   gap: 15px;
-  max-width: 500px;
-  margin: 20px auto;
 }
 
 form label {
@@ -251,9 +228,9 @@ form label {
 }
 
 form input, form textarea {
-  padding: 10px;
+  padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 6px;
   font-family: inherit;
 }
 
@@ -261,13 +238,13 @@ form textarea {
   resize: vertical;
 }
 
-/* Updated outline style for form button */
+/* Outline style for form button */
 form button {
   padding: 12px;
   border: 2px solid #333;
   background: transparent;
   color: #333;
-  border-radius: 5px;
+  border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -282,7 +259,7 @@ form button:hover {
 .button-group {
   margin: 20px 0;
   display: flex;
-  flex-direction: column;   /* stack vertically */
+  flex-direction: column;
   gap: 12px;
 }
 
@@ -338,7 +315,10 @@ form button:hover {
 }
 
 /* Responsive adjustments */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+  }
   .service-btn {
     width: 100%;
     text-align: center;
