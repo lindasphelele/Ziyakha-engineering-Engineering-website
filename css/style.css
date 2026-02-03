@@ -17,6 +17,12 @@ body {
   line-height: 1.6;
 }
 
+/* Background for inner pages (About, Services, etc.) */
+body:not(.home) {
+  background: linear-gradient(to bottom right, #f0f4f8, #e6ebf2);
+  min-height: 100vh;
+}
+
 /* ===================== */
 /* Top Contact Bar */
 /* ===================== */
@@ -210,9 +216,39 @@ header.logo-header {
 }
 
 .services h2 {
-  font-size: 2.6rem;
-  margin-bottom: 40px;
+  font-size: 2.8rem;
+  font-weight: 700;
   color: #222;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.services h2::after {
+  content: "";
+  width: 100px;
+  height: 4px;
+  background: #007bff;
+  display: block;
+  margin: 20px auto 0;
+  border-radius: 2px;
+}
+
+.service-card h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.service-card h3::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #00c6ff;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
 }
 
 .services-intro {
@@ -241,12 +277,6 @@ header.logo-header {
 .service-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-}
-
-.service-card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 12px;
-  color: #222;
 }
 
 .service-card p {
@@ -339,28 +369,4 @@ header.logo-header {
   background: #fff;
   border-radius: 16px;
   padding: 40px 25px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-item:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-}
-
-.about-icon {
-  width: 90px;
-  height: 90px;
-  margin: 0 auto 25px;
-  background: linear-gradient(135deg, #007bff, #00c6ff);
-  color: #fff;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 34px;
-  box-shadow: 0 6px 16px rgba(0,123,255,0.25);
-}
-
-.about-item h3 {
-  font-size: 1.
+  box-shadow: 0 8px
