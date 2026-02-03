@@ -261,18 +261,21 @@ form textarea {
   resize: vertical;
 }
 
+/* Updated outline style for form button */
 form button {
   padding: 12px;
-  background: #333;
-  color: #fff;
-  border: none;
+  border: 2px solid #333;
+  background: transparent;
+  color: #333;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 form button:hover {
-  background: #555;
+  background: #333;
+  color: #fff;
 }
 
 /* --- SERVICES PAGE BUTTONS --- */
@@ -283,34 +286,35 @@ form button:hover {
   gap: 12px;
 }
 
-/* Modern attractive button styling */
+/* Outline button styling for services */
 .service-btn {
   position: relative;
-  background: linear-gradient(135deg, #007a5c, #00b894);
-  color: #fff;                 /* text visible */
-  border: none;
+  background: transparent;
+  color: #007a5c;
+  border: 2px solid #007a5c;
   padding: 14px 20px;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   border-radius: 8px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   letter-spacing: 0.5px;
   z-index: 1;
-  text-align: left;            /* names listed down */
+  text-align: left;
 }
 
 /* Hover effect */
 .service-btn:hover {
-  background: linear-gradient(135deg, #00c9a7, #007a5c);
+  background: #007a5c;
+  color: #fff;
   transform: translateX(5px);
-  box-shadow: 0 6px 16px rgba(0, 201, 167, 0.4);
+  box-shadow: 0 6px 16px rgba(0, 122, 92, 0.3);
 }
 
 /* Active state */
 .service-btn.active {
-  background: linear-gradient(135deg, #ff6f61, #ff3d00);
+  background: #ff3d00;
+  border-color: #ff3d00;
   color: #fff;
   box-shadow: 0 6px 18px rgba(255, 61, 0, 0.4);
 }
@@ -321,7 +325,7 @@ form button:hover {
   border-radius: 50%;
   transform: scale(0);
   animation: ripple 0.6s linear;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(0, 122, 92, 0.2);
   pointer-events: none;
   z-index: 0;
 }
