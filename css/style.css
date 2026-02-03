@@ -1,234 +1,145 @@
-/* General Reset */
+/* ===================== */
+/* RESET */
+/* ===================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body and Typography */
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: linear-gradient(to bottom right, #ffffff, #f7f9fb);
+  font-family: "Segoe UI", Arial, sans-serif;
   color: #333;
-  line-height: 1.6;
-}
-
-/* Top Contact Bar */
-.top-bar {
-  background: #007bff;
-  color: #fff;
-  text-align: center;
-  padding: 8px;
-  font-size: 0.9rem;
-}
-
-/* Header and Logo */
-header.logo-header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  padding: 20px;
-  border-bottom: 1px solid #eee;
-}
-
-.logo {
-  height: 70px;
-  margin-right: 15px;
-}
-
-.company-name {
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: #333;
-  letter-spacing: 1px;
-}
-
-/* --- ACTION BAR --- */
-.action-bar {
-  position: fixed;
-  top: 12px;
-  right: 12px;
-  z-index: 9999;
   background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  padding: 12px;
+  line-height: 1.7;
 }
 
-/* Hamburger Icon */
-.menu-icon {
-  cursor: pointer;
-  background: #007a5c;
-  padding: 9px;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  border-radius: 8px;
-  transition: background 0.3s ease;
-}
-
-.menu-icon:hover { background: #005f47; }
-
-.menu-icon span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: #fff;
-  border-radius: 2px;
-}
-
-/* --- NAV MENU --- */
-.nav-menu {
-  position: fixed;
-  top: 0;
-  right: -320px;
-  width: 300px;
-  height: 100%;
-  background: #ffffff;
-  box-shadow: -10px 0 25px rgba(0,0,0,0.15);
-  transition: right 0.4s ease;
-  padding: 40px 20px;
-  z-index: 10000;
-}
-
-.nav-menu.active { right: 0; }
-
-.nav-menu ul { list-style: none; padding: 0; margin: 0; }
-
-.nav-menu li { margin: 20px 0; }
-
-.nav-menu a {
-  text-decoration: none;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #333;
-  transition: color 0.3s ease;
-}
-
-.nav-menu a:hover { color: #007bff; }
-
-/* Hero Slideshow */
-.hero {
-  position: relative;
-  height: 600px;
-  overflow: hidden;
-}
-
-.slides img {
-  width: 100%;
-  height: 600px;
-  object-fit: cover;
-}
-
-/* Welcome Section */
-.welcome {
-  text-align: center;
-  padding: 50px 20px;
-}
-
-/* Content Sections */
-.content {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
-  text-align: center; /* CENTERED for services, partnerships, affiliations */
-}
-
-/* =============================== */
-/* ABOUT US – CARD STYLE (ADDED)   */
-/* =============================== */
+/* ===================== */
+/* ABOUT US – SAME STYLE AS IMAGE */
+/* ===================== */
 
 .about-section {
-  padding: 60px 20px;
+  padding: 90px 20px;
   max-width: 1200px;
   margin: auto;
 }
 
 .about-section h2 {
   text-align: center;
-  margin-bottom: 30px;
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
 }
 
-.about-cards {
+.about-section h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #007bff;
+  margin: 12px auto 0;
+}
+
+.about-container {
+  margin-top: 70px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 25px;
-}
-
-.about-card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  padding: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 60px;
   text-align: center;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.about-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+/* Icon circles */
+.about-icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #007bff;
+  color: #fff;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 25px;
 }
 
-.about-card h3 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
+/* Titles */
+.about-box h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
   color: #000;
 }
 
-.about-card p {
-  color: #555;
+/* Text */
+.about-box p {
   font-size: 0.95rem;
-}
-
-/* Partnerships / Affiliations */
-.cards {
-  justify-items: center;
-}
-
-.card {
-  max-width: 320px;
-}
-
-/* Contact Page Layout (UNCHANGED) */
-.contact-section {
-  padding: 60px 20px;
-  max-width: 1200px;
+  color: #666;
+  max-width: 300px;
   margin: auto;
 }
 
-.contact-message {
-  text-align: center;
+/* ===================== */
+/* CONTACT – TWO CARD DESIGN */
+/* ===================== */
+
+.contact-section {
+  padding: 90px 20px;
+  background: #f7f9fb;
 }
 
-/* --- SERVICES PAGE BUTTONS (OUTLINE KEPT) --- */
-.button-group {
-  margin: 30px auto;
-  max-width: 500px;
+.contact-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.contact-title h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+}
+
+.contact-title h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: #007bff;
+  margin: 12px auto 0;
+}
+
+.contact-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+/* Contact cards */
+.contact-card {
+  background: #fff;
+  padding: 45px;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+
+.contact-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 25px;
+}
+
+/* Contact rows */
+.contact-item {
+  display: flex;
   align-items: center;
-}
-
-.service-btn {
-  background: transparent;
-  color: #007a5c;
-  border: 2px solid #007a5c;
-  padding: 14px 20px;
+  gap: 16px;
+  margin-bottom: 18px;
   font-size: 1rem;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  width: 100%;
-  text-align: center;
-  transition: all 0.3s ease;
+  color: #555;
 }
 
-.service-btn:hover {
-  background: #007a5c;
-  color: #fff;
-}
-
-.service-btn.active {
-  background: #ff3d00;
-  border-color: #ff3d00;
-  color: #fff;
-}
+/* Icon circle */
+.contact-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
