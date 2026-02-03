@@ -127,119 +127,108 @@ header.logo-header {
   padding: 50px 20px;
 }
 
-.welcome h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #000;
+/* Content Sections */
+.content {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center; /* CENTERED for services, partnerships, affiliations */
 }
 
-/* ========================= */
-/* ===== ABOUT US ========= */
-/* ========================= */
+/* =============================== */
+/* ABOUT US – CARD STYLE (ADDED)   */
+/* =============================== */
 
 .about-section {
-  padding: 70px 20px;
+  padding: 60px 20px;
   max-width: 1200px;
   margin: auto;
 }
 
-.about-header {
+.about-section h2 {
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
-.about-header h2 {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #007bff;
-}
-
-.about-header p {
-  color: #555;
-  font-size: 1.1rem;
-  max-width: 700px;
-  margin: 15px auto 0;
-}
-
-/* About Cards */
 .about-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+  gap: 25px;
 }
 
 .about-card {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 30px 25px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-  border-left: 5px solid #007a5c;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .about-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
 }
 
 .about-card h3 {
-  font-size: 1.3rem;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
   color: #000;
-  font-weight: 700;
 }
 
 .about-card p {
   color: #555;
   font-size: 0.95rem;
-  line-height: 1.6;
 }
 
-/* Engineering Stat Look */
-.about-card span {
-  display: block;
-  margin-top: 15px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: #007a5c;
-  letter-spacing: 0.5px;
+/* Partnerships / Affiliations */
+.cards {
+  justify-items: center;
 }
 
-/* Contact Page Layout */
+.card {
+  max-width: 320px;
+}
+
+/* Contact Page Layout (UNCHANGED) */
 .contact-section {
   padding: 60px 20px;
   max-width: 1200px;
   margin: auto;
 }
 
-.contact-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
+.contact-message {
+  text-align: center;
 }
 
-.contact-form, .contact-info {
-  flex: 1;
-  min-width: 300px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  padding: 30px;
+/* --- SERVICES PAGE BUTTONS (OUTLINE KEPT) --- */
+.button-group {
+  margin: 30px auto;
+  max-width: 500px;
+  align-items: center;
 }
 
-/* Buttons */
-form button {
-  margin-top: 15px;
-  padding: 12px;
-  border: 2px solid #007bff;
+.service-btn {
   background: transparent;
-  color: #007bff;
-  border-radius: 6px;
-  font-weight: bold;
+  color: #007a5c;
+  border: 2px solid #007a5c;
+  padding: 14px 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
   cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
-form button:hover {
-  background: #007bff;
+.service-btn:hover {
+  background: #007a5c;
+  color: #fff;
+}
+
+.service-btn.active {
+  background: #ff3d00;
+  border-color: #ff3d00;
   color: #fff;
 }
