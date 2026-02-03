@@ -1,15 +1,18 @@
 // -----------------------------
-// Utility: cycle through slides
+// Utility: cycle through slides with fade
 // -----------------------------
 function cycleSlides(className, interval, indexRef) {
   const slides = document.getElementsByClassName(className);
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
+    slides[i].style.opacity = 0;
+    slides[i].style.transition = "opacity 1s ease";
   }
   indexRef.value++;
   if (indexRef.value > slides.length) indexRef.value = 1;
   if (slides.length > 0) {
     slides[indexRef.value - 1].style.display = "block";
+    slides[indexRef.value - 1].style.opacity = 1;
   }
   setTimeout(() => cycleSlides(className, interval, indexRef), interval);
 }
@@ -37,7 +40,10 @@ cycleSlides("partnershipSlides", 3500, partnershipIndex);
 // -----------------------------
 function toggleMenu() {
   const navMenu = document.getElementById("navMenu");
-  if (navMenu) navMenu.classList.toggle("active");
+  if (navMenu) {
+    navMenu.classList.toggle("active");
+    navMenu.style.transition = "right 0.4s ease";
+  }
 }
 
 // -----------------------------
@@ -85,7 +91,10 @@ document.addEventListener("DOMContentLoaded", () => {
       serviceButtons.forEach((btn) => btn.classList.remove("active"));
       button.classList.add("active");
 
-      // Optional: dynamic behavior
+      // Subtle scale animation
+      button.style.transform = "scale(1.05)";
+      setTimeout(() => (button.style.transform = "scale(1)"), 200);
+
       console.log(`Service selected: ${button.innerText}`);
     });
 
