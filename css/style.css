@@ -362,11 +362,3 @@ header.logo-header {
 .about-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-}
-
-.about-item {
-  background: #fff;
-  border-radius: 16px;
-  padding: 40px 25px;
-  box-shadow: 0 8
