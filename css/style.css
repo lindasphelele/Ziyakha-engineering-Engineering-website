@@ -333,7 +333,6 @@ form button:hover {
   gap: 12px;
 }
 
-/* Outline button styling for services */
 .service-btn {
   position: relative;
   background: transparent;
@@ -364,4 +363,5 @@ form button:hover {
   box-shadow: 0 6px 18px rgba(255, 61, 0, 0.4);
 }
 
-.service-btn .
+.service-btn .ripple {
+  position: absolute
