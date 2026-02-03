@@ -247,12 +247,26 @@ header.logo-header {
 
 /* Contact Page Layout */
 .contact-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px;
   padding: 60px 20px;
   max-width: 1200px;
   margin: auto;
+}
+
+.contact-message {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-message h2 {
+  font-size: 1.6rem;
+  color: #007bff; /* blue accent */
+  font-weight: 600;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
 }
 
 .contact-form, .contact-info {
@@ -274,16 +288,11 @@ header.logo-header {
   color: #555;
 }
 
-/* Contact Form */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
+/* Contact Form Inputs */
 form label {
   font-weight: 600;
   color: #333;
+  margin-top: 10px;
 }
 
 form input, form textarea {
@@ -291,18 +300,20 @@ form input, form textarea {
   border: 1px solid #ccc;
   border-radius: 6px;
   font-family: inherit;
+  width: 100%;
 }
 
 form textarea {
   resize: vertical;
 }
 
-/* Outline style for form button */
+/* Contact Form Button */
 form button {
+  margin-top: 15px;
   padding: 12px;
-  border: 2px solid #333;
+  border: 2px solid #007bff;
   background: transparent;
-  color: #333;
+  color: #007bff;
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
@@ -310,7 +321,7 @@ form button {
 }
 
 form button:hover {
-  background: #333;
+  background: #007bff;
   color: #fff;
 }
 
@@ -353,13 +364,4 @@ form button:hover {
   box-shadow: 0 6px 18px rgba(255, 61, 0, 0.4);
 }
 
-.service-btn .ripple {
-  position: absolute;
-  border-radius: 50%;
-  transform: scale(0);
-  animation: ripple 0.6s linear;
-  background-color: rgba(0, 122, 92, 0.2);
-}
-
-/* --- ABOUT US PAGE --- */
-.about {
+.service-btn .
