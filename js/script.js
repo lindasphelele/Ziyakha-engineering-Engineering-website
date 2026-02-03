@@ -86,11 +86,10 @@ document.addEventListener("DOMContentLoaded", () => {
       button.classList.add("active");
 
       // Optional: dynamic behavior
-      // Example: log or show modal
       console.log(`Service selected: ${button.innerText}`);
     });
 
-    // Ripple effect (JS fallback for CSS ::after)
+    // Ripple effect for outlined buttons
     button.addEventListener("mousedown", (e) => {
       const circle = document.createElement("span");
       circle.classList.add("ripple");
