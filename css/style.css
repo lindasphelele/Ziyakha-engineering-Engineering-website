@@ -360,8 +360,4 @@ form button:hover {
   background: #ff3d00;
   border-color: #ff3d00;
   color: #fff;
-  box-shadow: 0 6px 18px rgba(255, 61, 0, 0.4);
-}
-
-.service-btn .ripple {
-  position: absolute
+  box-shadow: 0 6px 18px rgba(255, 61, 0,
