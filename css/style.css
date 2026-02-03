@@ -180,56 +180,124 @@ header.logo-header {
   margin: auto;
 }
 
+/* ===================== */
+/* Services Buttons */
+/* ===================== */
+.services .btn {
+  display: inline-block;
+  padding: 12px 28px;
+  margin: 12px;
+  border: 2px solid #007bff;
+  background: transparent;
+  color: #007bff;
+  font-weight: 600;
+  border-radius: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.services .btn:hover {
+  background: #007bff;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 123, 255, 0.25);
+}
+
+.services .btn::after {
+  content: "";
+  position: absolute;
+  background: rgba(255,255,255,0.4);
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.services .btn:active::after {
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 0.5s, opacity 1s;
+}
+
 /* ================================================= */
-/* ABOUT US – Styled like the reference image */
+/* ABOUT US – Modern Style */
 /* ================================================= */
 .about-section {
-  padding: 90px 20px;
+  padding: 100px 20px;
   max-width: 1200px;
   margin: auto;
   text-align: center;
 }
 
 .about-section h2 {
-  font-size: 1.8rem;
-  letter-spacing: 3px;
+  font-size: 2.8rem;
   font-weight: 700;
-  margin-bottom: 60px;
+  color: #222;
+  margin-bottom: 70px;
+  position: relative;
+}
+
+.about-section h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #007bff;
+  display: block;
+  margin: 20px auto 0;
+  border-radius: 2px;
 }
 
 .about-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 60px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
 }
 
 .about-item {
-  padding: 10px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 40px 25px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
 }
 
 .about-icon {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   margin: 0 auto 25px;
-  background: #007bff;
+  background: linear-gradient(135deg, #007bff, #00c6ff);
   color: #fff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 32px;
+  font-size: 34px;
+  box-shadow: 0 6px 16px rgba(0,123,255,0.25);
 }
 
 .about-item h3 {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  color: #333;
 }
 
 .about-item p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #666;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 /* ===================== */
@@ -302,3 +370,4 @@ header.logo-header {
 form input,
 form textarea {
   width: 100%;
+}
