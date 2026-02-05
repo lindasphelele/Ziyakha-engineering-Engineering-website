@@ -372,3 +372,6 @@ header.logo-header {
 }
 
 .about-section h2::after {
+  content: "";
+  width: 80px;
+  height:
