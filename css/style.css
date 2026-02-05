@@ -17,7 +17,6 @@ body {
   line-height: 1.6;
 }
 
-/* Background for inner pages (About, Services, etc.) */
 body:not(.home) {
   background: linear-gradient(to bottom right, #f0f4f8, #e6ebf2);
   min-height: 100vh;
@@ -44,6 +43,11 @@ header.logo-header {
   background: #fff;
   padding: 20px;
   border-bottom: 1px solid #eee;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -128,17 +132,35 @@ header.logo-header {
 }
 
 /* ===================== */
-/* Hero */
+/* Hero (Slideshow) */
 /* ===================== */
 .hero {
   position: relative;
-  height: 600px;
+  margin-top: 110px; /* adjust to header height */
+  height: calc(100vh - 110px);
   overflow: hidden;
+}
+
+.slider {
+  position: relative;
+  height: 100%;
+}
+
+.slides {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slides.active {
+  opacity: 1;
 }
 
 .slides img {
   width: 100%;
-  height: 600px;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -350,23 +372,3 @@ header.logo-header {
 }
 
 .about-section h2::after {
-  content: "";
-  width: 80px;
-  height: 4px;
-  background: #007bff;
-  display: block;
-  margin: 20px auto 0;
-  border-radius: 2px;
-}
-
-.about-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 40px;
-}
-
-.about-item {
-  background: #fff;
-  border-radius: 16px;
-  padding: 40px 25px;
-  box-shadow: 0 8px 24px rgba(0,
