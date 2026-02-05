@@ -1,5 +1,5 @@
 // -----------------------------
-// Utility: cycle through slides with fade
+// Utility: cycle through slides with fade (homepage hero)
 // -----------------------------
 function cycleSlides(className, interval, indexRef) {
   const slides = document.getElementsByClassName(className);
@@ -23,22 +23,60 @@ function cycleSlides(className, interval, indexRef) {
 }
 
 // -----------------------------
-// General Slideshow (homepage)
+// General Slideshow (homepage hero)
 // -----------------------------
 let slideIndex = { value: 0 };
 cycleSlides("slides", 4000, slideIndex);
 
 // -----------------------------
-// Affiliations Slideshow
+// Utility: cycle through slides with horizontal slide (partnerships & affiliations)
 // -----------------------------
-let affiliationIndex = { value: 0 };
-cycleSlides("affiliationSlides", 3000, affiliationIndex);
+function cycleSlidesHorizontal(containerId, interval, indexRef) {
+  const container = document.getElementById(containerId);
+  if (!container) return;
+
+  const track = container.querySelector(".slider-track");
+  const slides = container.querySelectorAll(".slider-item");
+
+  indexRef.value++;
+  if (indexRef.value >= slides.length) indexRef.value = 0;
+
+  // Move track to show current slide
+  track.style.transform = `translateX(-${indexRef.value * 100}%)`;
+
+  setTimeout(() => cycleSlidesHorizontal(containerId, interval, indexRef), interval);
+}
 
 // -----------------------------
-// Partnerships Slideshow
+// Partnerships Slideshow (horizontal slide)
 // -----------------------------
 let partnershipIndex = { value: 0 };
-cycleSlides("partnershipSlides", 3500, partnershipIndex);
+cycleSlidesHorizontal("partnershipSlider", 3500, partnershipIndex);
+
+// -----------------------------
+// Affiliations Slideshow (horizontal slide)
+// -----------------------------
+let affiliationIndex = { value: 0 };
+cycleSlidesHorizontal("affiliationSlider", 3000, affiliationIndex);
+
+// -----------------------------
+// Manual navigation for sliders
+// -----------------------------
+function nextSlide(containerId, indexRef) {
+  const container = document.getElementById(containerId);
+  const track = container.querySelector(".slider-track");
+  const slides = container.querySelectorAll(".slider-item");
+  indexRef.value = (indexRef.value + 1) % slides.length;
+  track.style.transform = `translateX(-${indexRef.value * 100}%)`;
+}
+
+function prevSlide(containerId, indexRef) {
+  const container = document.getElementById(containerId);
+  const track = container.querySelector(".slider-track");
+  const slides = container.querySelectorAll(".slider-item");
+  indexRef.value = (indexRef.value - 1 + slides.length) % slides.length;
+  track.style.transform = `translateX(-${indexRef.value * 100}%)`;
+}
 
 // -----------------------------
 // Modern Action Bar Toggle
