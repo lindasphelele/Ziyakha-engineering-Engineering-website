@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Affiliations - Ziyakha Engineering</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- External stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -39,37 +40,35 @@
     <h2>Affiliations</h2>
     <p>We are affiliated with respected organizations and certification bodies to ensure compliance and excellence in safety and construction standards.</p>
 
-    <!-- Slideshow container -->
-    <div class="slideshow-container">
-
-      <div class="affiliationSlides fade">
-        <img src="images/affiliation1.png.jpeg" alt="NYDA">
+    <!-- Modern Sliding Slideshow -->
+    <div id="affiliationSlider" class="slider-horizontal">
+      <div class="slider-track">
+        <div class="slider-item">
+          <img src="images/affiliation1.png.jpeg" alt="NYDA">
+        </div>
+        <div class="slider-item">
+          <img src="images/affiliation2.png.jpeg" alt="Standard Bank">
+        </div>
+        <div class="slider-item">
+          <img src="images/affiliation3.png.jpeg" alt="WCW">
+        </div>
+        <div class="slider-item">
+          <img src="images/affiliation4.png.jpeg" alt="Graca Machel Trust">
+        </div>
+        <div class="slider-item">
+          <img src="images/softstart_0.png.png" alt="SoftStart BTI">
+        </div>
+        <div class="slider-item">
+          <img src="images/ekasi-footer-1.png" alt="Ekasi Labs">
+        </div>
       </div>
-
-      <div class="affiliationSlides fade">
-        <img src="images/affiliation2.png.jpeg" alt="Standard Bank">
-      </div>
-
-      <div class="affiliationSlides fade">
-        <img src="images/affiliation3.png.jpeg" alt="WCW">
-      </div>
-
-      <div class="affiliationSlides fade">
-        <img src="images/affiliation4.png.jpeg" alt="Graca Machel Trust">
-      </div>
-
-      <div class="affiliationSlides fade">
-        <img src="images/softstart_0.png.png" alt="SoftStart BTI">
-      </div>
-
-      <div class="affiliationSlides fade">
-        <img src="images/ekasi-footer-1.png" alt="Ekasi Labs">
-      </div>
-
+      <!-- Navigation arrows -->
+      <button class="slider-arrow left" onclick="prevSlide('affiliationSlider')">&#10094;</button>
+      <button class="slider-arrow right" onclick="nextSlide('affiliationSlider')">&#10095;</button>
     </div>
   </section>
 
-  <!-- JavaScript -->
+  <!-- External JavaScript -->
   <script src="js/script.js"></script>
 </body>
 </html>
