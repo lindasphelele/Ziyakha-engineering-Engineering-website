@@ -237,9 +237,6 @@ header.logo-header {
   text-align: center;
 }
 
-/* === SERVICES STYLES CONTINUE UNCHANGED === */
-/* (everything here stays exactly as you had it) */
-
 /* ================================================= */
 /* ABOUT US – ONLY EXTENDED, NOT CHANGED */
 /* ================================================= */
@@ -268,7 +265,7 @@ header.logo-header {
   border-radius: 2px;
 }
 
-/* === ABOUT CARDS (NEW, SAFE) === */
+/* === ABOUT CARDS === */
 .about-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -301,7 +298,7 @@ header.logo-header {
 }
 
 /* ================================================= */
-/* CONTACT – 2 CARDS WITH ICONS (NEW ONLY) */
+/* CONTACT – 2 CARDS WITH ICONS */
 /* ================================================= */
 .contact-section {
   padding: 100px 20px;
