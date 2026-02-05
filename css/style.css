@@ -136,7 +136,7 @@ header.logo-header {
 /* ===================== */
 .hero {
   position: relative;
-  margin-top: 110px; /* adjust to header height */
+  margin-top: 110px;
   height: calc(100vh - 110px);
   overflow: hidden;
 }
@@ -374,4 +374,5 @@ header.logo-header {
 .about-section h2::after {
   content: "";
   width: 80px;
-  height:
+  height: 4px;
+  background:
