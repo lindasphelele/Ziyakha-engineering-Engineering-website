@@ -3,17 +3,22 @@
 // -----------------------------
 function cycleSlides(className, interval, indexRef) {
   const slides = document.getElementsByClassName(className);
+
+  // Hide all slides
   for (let i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-    slides[i].style.opacity = 0;
-    slides[i].style.transition = "opacity 1s ease";
+    slides[i].classList.remove("active");
   }
+
+  // Move to next slide
   indexRef.value++;
   if (indexRef.value > slides.length) indexRef.value = 1;
+
+  // Show current slide
   if (slides.length > 0) {
-    slides[indexRef.value - 1].style.display = "block";
-    slides[indexRef.value - 1].style.opacity = 1;
+    slides[indexRef.value - 1].classList.add("active");
   }
+
+  // Repeat after interval
   setTimeout(() => cycleSlides(className, interval, indexRef), interval);
 }
 
