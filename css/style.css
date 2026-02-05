@@ -141,60 +141,6 @@ header.logo-header {
   overflow: hidden;
 }
 
-.slider {
-  position: relative;
-  height: 100%;
-}
-
-.slides {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  transition: opacity 1s ease-in-out;
-}
-
-.slides.active {
-  opacity: 1;
-}
-
-.slides img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: #fff;
-}
-
-.hero-text h2 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.btn-outline {
-  padding: 12px 24px;
-  border: 2px solid #fff;
-  background: transparent;
-  color: #fff;
-  border-radius: 6px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btn-outline:hover {
-  background: #fff;
-  color: #007bff;
-}
-
 /* ===================== */
 /* Welcome Section */
 /* ===================== */
@@ -204,163 +150,15 @@ header.logo-header {
   background: #f9fbfd;
 }
 
-.welcome h2 {
-  font-size: 2.4rem;
-  margin-bottom: 20px;
-  color: #222;
-}
-
-.welcome-text {
-  font-size: 1.1rem;
-  color: #555;
-  max-width: 800px;
-  margin: 0 auto 40px;
-  line-height: 1.8;
-}
-
 /* ===================== */
-/* Content */
-/* ===================== */
-.content {
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-/* ===================== */
-/* Services Section */
-/* ===================== */
-.services {
-  padding: 80px 20px;
-  max-width: 1200px;
-  margin: auto;
-  text-align: center;
-}
-
-.services h2 {
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: #222;
-  margin-bottom: 50px;
-  position: relative;
-}
-
-.services h2::after {
-  content: "";
-  width: 100px;
-  height: 4px;
-  background: #007bff;
-  display: block;
-  margin: 20px auto 0;
-  border-radius: 2px;
-}
-
-.service-card h3 {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #007bff;
-  margin-bottom: 16px;
-  position: relative;
-}
-
-.service-card h3::after {
-  content: "";
-  width: 60px;
-  height: 3px;
-  background: #00c6ff;
-  display: block;
-  margin: 10px auto 0;
-  border-radius: 2px;
-}
-
-.services-intro {
-  font-size: 1.1rem;
-  color: #555;
-  max-width: 800px;
-  margin: 0 auto 60px;
-  line-height: 1.8;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
-}
-
-.service-card {
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-  padding: 30px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-}
-
-.service-card p {
-  font-size: 0.95rem;
-  color: #666;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-/* ===================== */
-/* Outlined Buttons */
-/* ===================== */
-.btn,
-.service-btn {
-  display: inline-block;
-  padding: 12px 28px;
-  margin: 6px;
-  border: 2px solid #007bff;
-  background: transparent;
-  color: #007bff;
-  font-weight: 600;
-  border-radius: 8px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.btn:hover,
-.service-btn:hover {
-  background: #007bff;
-  color: #fff;
-  box-shadow: 0 6px 18px rgba(0,123,255,0.25);
-}
-
-/* Ripple Effect */
-.service-btn .ripple {
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(0, 123, 255, 0.4);
-  transform: scale(0);
-  animation: ripple-animation 0.6s linear;
-  pointer-events: none;
-}
-
-@keyframes ripple-animation {
-  to {
-    transform: scale(4);
-    opacity: 0;
-  }
-}
-
-/* ================================================= */
 /* ABOUT US – Modern Style */
-/* ================================================= */
+/* ===================== */
 .about-section {
   padding: 100px 20px;
   max-width: 1200px;
   margin: auto;
   text-align: center;
+  background: #ffffff;
 }
 
 .about-section h2 {
@@ -375,4 +173,123 @@ header.logo-header {
   content: "";
   width: 80px;
   height: 4px;
-  background:
+  background: #007bff;
+  display: block;
+  margin: 20px auto 0;
+  border-radius: 3px;
+}
+
+/* ===== Added: About Cards ===== */
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.about-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+.about-card i {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.about-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.about-card p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.7;
+}
+
+/* ===================== */
+/* CONTACT – Modern Cards */
+/* ===================== */
+.contact-section {
+  padding: 100px 20px;
+  background: linear-gradient(to bottom right, #ffffff, #f3f7fb);
+}
+
+.contact-container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-container h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #222;
+  position: relative;
+}
+
+.contact-container h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #007bff;
+  display: block;
+  margin: 20px auto 0;
+  border-radius: 3px;
+}
+
+/* ===== Added: Contact Cards ===== */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}
+
+.contact-card {
+  background: #ffffff;
+  padding: 45px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+}
+
+.contact-card i {
+  font-size: 3rem;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.contact-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.contact-card p,
+.contact-card a {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  text-decoration: none;
+}
+
+.contact-card a:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
